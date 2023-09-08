@@ -27,13 +27,15 @@ p {
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
     width: 1158px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.container-inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* header */
@@ -47,8 +49,7 @@ p {
     border-bottom: 1px solid #e7e9fc;
 }
 
-.header .container {
-    display: flex;
+.header .container-inner {
     flex-direction: row;
 
     gap: 332px;
@@ -129,14 +130,14 @@ p {
     align-items: center;
     justify-content: center;
 
-    background: #2e2f42;
-
-    height: 600px;
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/intro-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 
     padding: 188px 0;
 }
 
-.intro .container {
+.intro .container-inner {
     gap: 48px;
 }
 
@@ -181,6 +182,23 @@ p {
 }
 
 /* other */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+
+    margin: -1px;
+    padding: 0;
+
+    border: 0;
+
+    white-space: nowrap;
+    overflow: hidden;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+}
+
 .subtitle {
     text-align: center;
     font-size: 36px;
@@ -208,7 +226,7 @@ p {
 
     width: calc((100% - 48px) / 3);
 
-    padding-bottom: 0px;
+    /* padding-bottom: 0px; */
 }
 
 .card-list-item-content {
@@ -230,7 +248,7 @@ p {
     letter-spacing: 0.4px;
     color: #2e2f42;
 
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
 }
 
 .card-list-description {
@@ -248,21 +266,18 @@ p {
     padding: 120px 0;
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
+.advantages .card-list-item {
+    gap: 8px;
+}
 
-    margin: -1px;
-    padding: 0;
+.advantages-icon-container {
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    background: #f4f4fd;
 
-    border: 0;
-
-    white-space: nowrap;
-    overflow: hidden;
-
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* team */
@@ -324,7 +339,7 @@ p {
     padding: 100px 0;
 }
 
-.footer .container {
+.footer .container-inner {
     display: block;
 }
 
