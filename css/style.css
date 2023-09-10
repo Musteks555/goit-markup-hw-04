@@ -45,6 +45,7 @@ p {
     justify-content: center;
 
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .header .container-inner {
@@ -90,6 +91,10 @@ p {
     position: relative;
 }
 
+.header-nav-item-active .header-nav-link {
+    color: #404bbf;
+}
+
 .header-nav-item-active::after {
     content: '';
     display: block;
@@ -98,10 +103,11 @@ p {
     height: 4px;
 
     border-radius: 2px;
-    background: #404bbf;
+    background-color: #404bbf;
 
     position: absolute;
-    bottom: 0;
+    left: 0;
+    bottom: -1px;
 }
 
 .header-nav-link {
